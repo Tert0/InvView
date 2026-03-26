@@ -20,7 +20,7 @@ public class SavingPlayerDataGui extends SimpleGui {
     }
 
     @Override
-    public void onClose() {
+    public void onManualClose() {
         InvView.savePlayerData(savedPlayer);
     }
 }

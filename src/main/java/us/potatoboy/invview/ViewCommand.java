@@ -52,7 +52,7 @@ public class ViewCommand {
                 gui.setTitle(requestedPlayer.getName());
                 addBackground(gui);
                 for (int i = 0; i < requestedPlayer.getInventory().getContainerSize(); i++) {
-                    gui.setSlotRedirect(i, canModify ? new Slot(requestedPlayer.getInventory(), i, 0, 0)
+                    gui.setSlot(i, canModify ? new Slot(requestedPlayer.getInventory(), i, 0, 0)
                             : new UnmodifiableSlot(requestedPlayer.getInventory(), i));
                 }
 
@@ -86,7 +86,7 @@ public class ViewCommand {
                 gui.setTitle(requestedPlayer.getName());
                 addBackground(gui);
                 for (int i = 0; i < requestedEchest.getContainerSize(); i++) {
-                    gui.setSlotRedirect(i,
+                    gui.setSlot(i,
                             canModify ? new Slot(requestedEchest, i, 0, 0) : new UnmodifiableSlot(requestedEchest, i));
                 }
 
